@@ -1,8 +1,8 @@
-  *<h1> Insurance-Car</h1>
+- Insurance-Car
  
       Plano de Saúde Veicular
 
-*<b><h1> Descrição do projeto:</b></h1><br><br>
+-<b><h1> Descrição do projeto:</b></h1><br><br>
     O projeto consiste em auxiliar qualquer pessoa que tenha um carro e tenha interesse de pagar uma quantia fixa ao mês para a oficina, assim tendo direito a algumn benefícios como: Reboques, Revisões, Alinhamentos, Balanceamentos e descontos na mão de obra dos serviços para os clientes cadastrados. Terá a parte de administração, que será manuseada pela equipe da oficina em serviço a um cliente físico ou jurídico.<br>
   A oficina: Administra o sistema: Cadastra, altera e deleta os pagamentos, revisões, alinhamos e balanceamentos, reboques e os clientes e seus respectivos carros cadastrados.<br>
   O cliente: Visualiza os serviços feitos no(s) seu(s) carros e seu pagamentos.<br>
