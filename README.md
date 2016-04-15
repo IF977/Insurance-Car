@@ -14,6 +14,6 @@ O cenário de manutenção automotiva também precisa se estabilizar em meio à 
   
 -<b> Papeis de cada um no projeto:<br></b>
 <b>Wellington (wmof):</b> Líder, irá gerir o projeto e tomar as decisões de quais medidas serão tomadas. E claro também irá desenvolver com a equipe<br>
-<b>Edson (...):</b> Desenvolvedor Front-end, Cuidara da parte de interação com o cliente da Loja<br>
+<b>Edson (ensn96):</b> Desenvolvedor Front-end, Cuidara da parte de interação com o cliente da Loja<br>
 <b>Diego (diegodeholanda):</b> Desenvolvedor Back-end, Cuidara da parte administrativa do sistema(Oficina)<br>
 <b>Ricardo (rbm4):</b> Analista e desenvolvedor de TestesTeste, será responsável pela parte de teste do Sistema<br>
