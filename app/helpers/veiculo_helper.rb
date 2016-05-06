@@ -1,0 +1,2 @@
+module VeiculoHelper
+end
