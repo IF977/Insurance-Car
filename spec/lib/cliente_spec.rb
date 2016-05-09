@@ -8,7 +8,7 @@ describe Cliente do
     obj = Cliente.new
     
     it "Checar instância de self" do
-        expect(obj.to be_an_instance_of(Cliente)
+        expect(obj).to be_an_instance_of(Cliente)
     end
     
     it "O nome é válido?" do
