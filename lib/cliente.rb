@@ -1,7 +1,7 @@
 class Cliente
   attr_accessor :cpf,:nome,:endereco,:telefone
   
-  def iniciando
+  def initialize
     @cpf = "00000000000"
     @nome = "Ricardo Barbosa Malafaia"
     @endereco = "Cin - ufpe, várzea, recife-PE"
