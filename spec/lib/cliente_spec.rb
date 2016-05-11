@@ -30,6 +30,7 @@ describe Cliente do
         expect(obj.telefone).not_to match(valid_input)
     end
     it "CPF é válido?" do
+        
         expect(obj.cpf).to match(regex_num)
         expect(obj.cpf).not_to be_empty
         expect(obj.cpf).not_to match("00000000000")
