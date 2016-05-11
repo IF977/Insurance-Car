@@ -59,6 +59,6 @@ describe Revisao do
         expect(obj.relatorio).to match(regex_relatorio)
     end
     it "A revisão esta autorizada?" do
-        expect(obj.autorizacao == TrueClass)
+        expect(obj.autorizacao).to be true
     end
 end

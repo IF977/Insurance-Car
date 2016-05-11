@@ -6,6 +6,6 @@ class Revisao
         @hora="23:59"
         @km="256858"
         @relatorio="cin, ufpe, várzea"
-        @autorizacao= True
+        @autorizacao= true
     end
 end
