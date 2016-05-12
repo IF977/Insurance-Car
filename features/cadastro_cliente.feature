@@ -1,6 +1,9 @@
 Feature: Cadastrar clientes
-  Como o dono da oficina,
-  Eu preciso de um sistema para gerenciar meus clientes para que eu possa gerencia-los
+  As a User
+  In order to manage my clients 
+  I want to register a new client
   
- Scenario: cadastrar novo cliente
-   Given 
+ Scenario: Index 
+   Given I am on the index page
+   When I click on the client view link
+   Then I should see "Formulario de cadastro de clientes"
