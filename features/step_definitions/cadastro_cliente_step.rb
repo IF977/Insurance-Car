@@ -1,5 +1,5 @@
 Given(/^I am on the index page$/) do
-    '/public/css'
+    '/'
 end
 
 When(/^I click on the client view link$/) do
