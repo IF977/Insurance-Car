@@ -4,7 +4,7 @@ class CreatePagamentos < ActiveRecord::Migration
       t.string :codigo
       t.string :data
       t.string :hora
-      t.int :valor
+      t.string :valor
 
       t.timestamps null: false
     end

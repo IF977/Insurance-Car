@@ -6,7 +6,7 @@ class CreateRevisaos < ActiveRecord::Migration
       t.string :hora
       t.string :km
       t.string :relatorio
-      t.int :autorizacao
+      t.boolean :autorizacao
 
       t.timestamps null: false
     end
