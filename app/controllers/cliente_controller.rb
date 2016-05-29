@@ -1,5 +1,5 @@
 class ClienteController < ApplicationController
-  def cadastrar
+  def cardastrar
     
   end
 end
