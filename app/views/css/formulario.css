@@ -1,0 +1,42 @@
+h2 {
+    margin-bottom: 20px;
+    color: #191970;
+}
+input, textarea, option {
+    padding: 10px;
+    border: 1px solid #006633;
+    width: 200px;
+    color: #999999;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+textarea, option {
+    left: 5%;
+    position: relative;
+    width: 40%;
+    height: 60%;
+    max-width: 400px;
+    line-height: 18px;
+}
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+    border-color: 1px solid #191970;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;     
+}
+.form label {
+    margin-bottom: 10px;
+    color: #191970;
+    display: block;
+}
+.submit input {
+    width: 100px;
+    height: 40px;
+    background-color: #191970;
+    color: #1E90FF;
+    border-radius: solid 3px #191970;
+    moz-border-radius: 3px;
+    -webkit-border-radius: 3px;                     
+}
