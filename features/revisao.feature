@@ -7,3 +7,4 @@ Feature: Cadastrar revisao dos carros dos clientes
    Given I am on the index
    When I click on the revision view link
    Then I should see "Lista de Revisoes"
+  
