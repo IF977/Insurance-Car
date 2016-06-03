@@ -3,7 +3,6 @@ Given(/^I am on the initial page$/) do
 end
 
 When(/^I click on the payment view link$/) do
-  #visit(root_path)
   expect(page).to have_content('Link para Registrar pagamento:')
   click_link('pagamento') 
 end
