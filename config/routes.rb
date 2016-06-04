@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/cadreb' => 'reboque#cadreb'
+  get '/cadrev' => 'revisao#cadrev'
   get '/pagreg' => 'pagamento#registrar'
   get '/cadastro' => 'cliente#cadastrar'
   root 'index#index'
