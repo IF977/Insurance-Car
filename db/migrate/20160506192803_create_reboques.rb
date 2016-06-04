@@ -7,7 +7,7 @@ class CreateReboques < ActiveRecord::Migration
       t.string :km
       t.string :destino
       t.string :origem
-      t.int :distancia
+      t.string :distancia
 
       t.timestamps null: false
     end
