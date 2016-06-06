@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get '/cadreb' => 'reboque#cadreb'
-  get '/cadrev' => 'revisao#cadrev'
-  get '/pagreg' => 'pagamento#registrar'
-  get '/cadastro' => 'cliente#cadastrar'
+  get 'reboque/cadreb' => 'reboque#cadreb'
+  get 'revisao/cadrev' => 'revisao#cadrev'
+  get 'pagamento/pagreg' => 'pagamento#registrar'
+  get 'cliente/cadastro' => 'cliente#cadastrar'
   root 'index#index'
-  get '/cardastro' => 'carro#cardastrar'
+  get 'carro/cardastro' => 'carro#cardastrar'
   # <get / post / delete> `/nome da rota` => `controller#metodo`
 end
