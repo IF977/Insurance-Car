@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'cliente/cadastro' => 'cliente#cadastrar'
   root 'index#index'
   get 'carro/cardastro' => 'carro#cardastrar'
+  post '/carro/input' => 'carro#input'
   # <get / post / delete> `/nome da rota` => `controller#metodo`
 end

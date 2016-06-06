@@ -29,30 +29,29 @@
 
 <div id = "formulario">
 	<h2>Formulario de cadastro de Veiculos</h2>
-    <form method="post" action="FormInsereVeiculo.php" class="form">
+    <%= form_for(@carro, url: input_car_path) action="/carro/input" class="form" :method => "post">
     <p class="name">
         <label for="placa">Placa</label>
         <input type="text" name="placa" placeholder="AAA-9999" required />
-    </p>
-    <p class="name">
+    #</p>
+    #<p class="name">
         <label for="marca">Marca</label>
         <input type="text" name="marca" placeholder="" required />
-    </p>
-    <p class="name">
+   # </p>
+   # <p class="name">
         <label for="modelo">Modelo</label>
         <input type="text" name="modelo" placeholder="" required />
-    </p>
-    <p class="name">
+   # </p>
+   # <p class="name">
         <label for="cliente">Cliente</label>
-        <select name='cliente_cpf'>
-   <option value='$cpf'>Wellington</option>";
-   <option value='$cpf'>Diego</option>";
-    </select>
-    </p>
+        <input type="text" name='cliente' placeholder="" required>
+   # </select>
+   # </p>
     <p class="submit">
-        <input type="submit" value="Adicionar" />
+        <input type="submit" value="cardastro" />
     </p>
     </form>
+    <% end %>
 
 </div>
 
