@@ -1,6 +1,6 @@
 class CreateReboques < ActiveRecord::Migration
   def change
-    create_table :reboques do |t|
+    create_table :reboque do |t|
       t.string :codigo
       t.string :data
       t.string :hora

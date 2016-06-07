@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <meta charset="utf-8">
 <html>
@@ -29,34 +29,14 @@
 
 <div id = "formulario">
 	<h2>Formulario de cadastro de Veiculos</h2>
-    <%= form_for(@carro, url: input_car_path) action="/carro/input" class="form" :method => "post">
-    <p class="name">
-        <label for="placa">Placa</label>
-        <input type="text" name="placa" placeholder="AAA-9999" required />
-    #</p>
-    #<p class="name">
-        <label for="marca">Marca</label>
-        <input type="text" name="marca" placeholder="" required />
-   # </p>
-   # <p class="name">
-        <label for="modelo">Modelo</label>
-        <input type="text" name="modelo" placeholder="" required />
-   # </p>
-   # <p class="name">
-        <label for="cliente">Cliente</label>
-        <input type="text" name='cliente' placeholder="" required>
-   # </select>
-   # </p>
-    <p class="submit">
-        <input type="submit" value="cardastro" />
-    </p>
-    </form>
-    <% end %>
+<%= form_for :carro, :action => carro_cardastro_path do |f| %>
+  Placa do carro: <%= f.text_field :placa %><br />
+  Marca do carro : <%= f.text_field :marca %><br />
+  Modelo do carro : <%= f.text_area :modelo %><br />
+  Nome do cliente    : <%= f.text_field :cliente %><br />
+  <%= f.submit %>
+<% end %>
 
 </div>
-
-  <img id="wmof" src="../img/wmof.jpg">
 </body>
-
-
 </html>

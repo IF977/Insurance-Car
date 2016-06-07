@@ -1,6 +1,6 @@
 class CreateRevisaos < ActiveRecord::Migration
   def change
-    create_table :revisaos do |t|
+    create_table :revisao do |t|
       t.string :codigo
       t.string :data
       t.string :hora
