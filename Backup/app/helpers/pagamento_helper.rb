@@ -1,2 +1,0 @@
-module PagamentoHelper
-end
