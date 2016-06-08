@@ -1,42 +1,24 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 
 <meta charset="utf-8">
 <html>
 <head>
 	<title>ADM -- Veiculo</title>
-  
-	<script src="../jquery/css.js"></script>
-  <style type="text/css">@import url("css/css.css");</style>
-  <script src="../jquery/formulario.js"></script>
-  <style type="text/css">@import url("css/formulario.css");</style>
 	
 </head>
 <body>
-<div id = "bancoDeDados">
-<h1>Lista de Veiculos</h1>
-<table border="1" align="center">
-<tr>
-<td><strong>Placa</strong></td><td><strong>Marca</strong></td><td><strong>Modelo</strong><td><strong>CPF do Dono</strong></td><td></td>
-</tr>
-<tr>
-<td>KKL-1519</td><td>Citroën</td><td>C4 Pallas<td><strong><a href="">000.000.000-07</a></strong></td><td><a href="">Excluir</a></td>
-</tr>
-<tr>
-<td>KIV-0245</td><td>GM</td><td>Vectra<td><strong><a href="">004.000.000-09</a></strong></td><td><a href="">Excluir</a></td>
-</tr>
-</table>
-</div>
+
 
 <div id = "formulario">
 	<h2>Formulario de cadastro de Veiculos</h2>
 <%= form_for :carro, :action => carro_cardastro_path do |f| %>
-  Placa do carro: <%= f.text_field :placa %><br />
+  Placa do carro: <%= f.text_field :placa %><br/ >
   Marca do carro : <%= f.text_field :marca %><br />
-  Modelo do carro : <%= f.text_area :modelo %><br />
+  Modelo do carro : <%= f.text_field :modelo %><br />
   Nome do cliente    : <%= f.text_field :cliente %><br />
   <%= f.submit %>
 <% end %>
-
+Para acessar a view de consulta de carros clique <a href='consulta'>Aqui</a>
 </div>
 </body>
 </html>

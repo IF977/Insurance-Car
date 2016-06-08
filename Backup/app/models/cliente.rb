@@ -4,14 +4,22 @@
 #In your example, you are passing a hash to the initialize method which can be used to set the default value of @name and @email.
 
 #You use this such as:
-class Cliente < ActiveRecord::Base
 
-    #attr_accessor :cpf,:nome,:endereco,:telefone
+#obj = Cliente.new({cpf: '07451635481', nome: 'ricardo barbosa malafaia', endereco: 'tiagay gaymaraes viadao', telefone: '='})
+#
+#
+#
+class Cliente
+include ActiveModel::Validations
+include ActiveModel::Conversion
+extend ActiveModel::Naming
+
+    attr_accessor :cpf,:nome,:endereco,:telefone
     
-    #def initialize(attributes = {})
-       # @cpf = attributes[:cpf]
-      #  @nome = attributes[:nome]
-     #   @endereco = attributes[:endereco]
-    #    @telefone = attributes[:telefone]
-   # end
+    def initialize(attributes = {})
+        @cpf = attributes[:cpf]
+        @nome = attributes[:nome]
+        @endereco = attributes[:endereco]
+        @telefone = attributes[:telefone]
+    end
 end
