@@ -1,0 +1,8 @@
+DELETE o cliente Digitando o CPF do a seguir: <br></p>
+<%= form_for :cliente, :action => cliente_updateform_path do |f| %>
+<label >CPF: </label>
+<%= f.text_field :cpf %>
+<%= f.submit "DELETAR CLIENTE", :class => "btn btn-info" %>
+<% end %>
+
+

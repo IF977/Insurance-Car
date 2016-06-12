@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+<head>
+	<title>ADM -- Reboque</title>
+  
+	<script src="../jquery/css.js"></script>
+  <style type="text/css">@import url("css/css.css");</style>
+  <script src="../jquery/formulario.js"></script>
+  <style type="text/css">@import url("css/formulario.css");</style>
+	
+</head>
+<body>
+<div id = "bancoDeDados">
+<h1>Lista de Reboques</h1>
+<table border="1" align="center">
+<tr>
+<td><strong>Data</strong></td><td><strong>Hora</strong></td><td><strong>Origem</strong></td><td><strong>Destino</strong></td><td><strong>Distancia</strong></td><td><strong>Placa do veiculo</strong></td>
+</tr>
+<tr>
+<td>30/05/2016</td><td>12:34</td><td>Aurora, Paulista-PE</td><td>Oficina Paulista</td><td>4</td><td><strong><a href="">KKL-1519</a></strong></td>
+</tr>
+<tr>
+<td>31/05/2016</td><td>09:40</td><td>Varzea, Recife-PE</td><td>Oficina Recife</td><td>18</td><td><strong><a href="">KIV-0245</a></strong></td>
+</tr>
+<tr>
+<td>03/06/2016</td><td>11:25</td><td>Oficina Recife</td><td>Oficina Cabo</td><td>12</td><td><strong><a href="">KIV-0245</a></strong></td>
+</tr>
+<tr>
+<td>04/06/2016</td><td>09:25</td><td>Oficina Cabo</td><td>Casa do Cliente, Rua das uvas, 77 Itamaraca-PE</td><td>42</td><td><strong><a href="">KIV-0245</a></strong></td>
+</tr>
+</table>
+</div>
+
+<div id = "formulario">
+	<h2>Formulário de cadastro de Reboque</h2>
+    <form method="post" action="FormInsereVeiculo.php" class="form">
+    <p class="name">
+        <label for="placa">Placa</label>
+        <input type="text" name="placa" placeholder="AAA-9999" required />
+    </p>
+    <p class="name">
+        <label for="km">KM</label>
+        <input type="text" name="km" placeholder="" required />
+    </p>
+    <p class="name">
+        <label for="distancia">Distancia</label>
+        <input type="text" name="distancia" placeholder="" required />
+    </p>
+     <p class="text">
+        <label for="origem">Origem</label>
+        <textarea name="origem" placeholder="Origem do reboque" required /></textarea>
+    </p>
+    <p class="text">
+        <label for="destino">Destino</label>
+        <textarea name="destino" placeholder="Destino" required /></textarea>
+    </p>
+    <p class="submit">
+        <input type="submit" value="Adicionar" />
+    </p>
+    </form>
+
+</div>
+</body>
+</html>

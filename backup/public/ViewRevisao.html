@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+<head>
+	<title>ADM -- Revisão</title>
+  
+	<script src="../jquery/css.js"></script>
+  <style type="text/css">@import url("css/css.css");</style>
+  <script src="../jquery/formulario.js"></script>
+  <style type="text/css">@import url("css/formulario.css");</style>
+	
+</head>
+<body>
+<div id = "bancoDeDados">
+<h1>Lista de Revisões</h1>
+<table border="1" align="center">
+<tr>
+<td><strong>Data</strong></td><td><strong>Hora</strong></td><td><strong>Link</strong></td><td><strong>Placa do veiculo</strong></td>
+</tr>
+<tr>
+<td>20/05/2016</td><td>14:35</td><td><a href="ViewRevisaoDetalheEX1.html">Detalhe</a></td><td><strong><a href="">KKL-1519</a></strong></td>
+</tr>
+<tr>
+<td>18/05/2016</td><td>12:30</td><td><a href="ViewRevisaoDetalheEX2.html">Detalhe</a></td><td><strong><a href="">KIV-0245</a></strong></td>
+</tr>
+</table>
+</div>
+
+<div id = "formulario">
+	<h2>Formulário de cadastro de Revisão</h2>
+    <form method="post" action="FormInsereVeiculo.php" class="form">
+    <p class="name">
+        <label for="placa">Placa</label>
+        <input type="text" name="placa" placeholder="AAA-9999" required />
+    </p>
+    <p class="name">
+        <label for="km">KM</label>
+        <input type="text" name="km" placeholder="" required />
+    </p>
+    <p class="name">
+        <label for="valor">Autorizacao</label>
+        <input type="text" name="valor" placeholder="" required />
+    </p>
+    <p class="text">
+        <label for="relatorio">Relatorio</label>
+        <textarea name="relatorio" placeholder="Relatorio Final" required /></textarea>
+    </p>
+    <p class="name">
+        <label for="">Autorização</label>
+         <input type="radio" name="autorizacao" value="1"> Sim
+         <input type="radio" name="autorizacao" value="0"> Não
+    </p>    
+    <p class="submit">
+        <input type="submit" value="Adicionar" />
+    </p>
+    </form>
+
+</div>
+</body>
+</html>

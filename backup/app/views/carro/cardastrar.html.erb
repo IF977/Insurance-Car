@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+<head>
+	<title>ADM -- Veiculo</title>
+	
+</head>
+<body>
+
+
+<div id = "formulario">
+	<h2>Formulario de cadastro de Veiculos</h2>
+<%= form_for :carro, :action => carro_cardastro_path do |f| %>
+  Placa do carro: <%= f.text_field :placa %><br/ >
+  Marca do carro : <%= f.text_field :marca %><br />
+  Modelo do carro : <%= f.text_field :modelo %><br />
+  Nome do cliente    : <%= f.text_field :cliente %><br />
+  <%= f.submit %>
+<% end %>
+Para acessar a view de consulta de carros clique <a href='consulta'>Aqui</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+<head>
+	<title>ADM -- Clientes</title>
+  
+	<script src="../jquery/css.js"></script>
+  <style type="text/css">@import url("css/css.css");</style>
+  <script src="../jquery/formulario.js"></script>
+  <style type="text/css">@import url("css/formulario.css");</style>
+	
+
+	
+</head>
+<body>
+<div id = "bancoDeDados">
+<h1>Lista de Clientes</h1>
+<table border="1" align="center">
+<tr>
+<td><strong>CPF</strong></td><td><strong>Nome</strong></td><td><strong>Endereço</strong></td><td><strong>Telefone</strong></td><td></td>
+</tr>
+<tr>
+<td>000.000.00-07</td><td>Wellington</td><td>Rua: das uvas, 07</td><td>81993090909</td><td><a href="">Excluir</a></td>
+</tr>
+<tr>
+<td>004.000.00-09</td><td>Diego</td><td>Av: Lindolfo Collor, 146</td><td>81993090909</td><td><a href="">Excluir</a></td>
+</tr>
+
+</table>
+</div>
+
+<div id = "formulario">
+	<h2>Formulario de cadastro de Cliente</h2>
+    <form method="post" action="FormInsereCliente.php" class="form">
+    <p class="name">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" placeholder="000.000.000-07" required />
+    </p>
+    <p class="email">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" placeholder="Nome" required />
+    </p>
+    <p class="text">
+        <label for="endereco">Endereço</label>
+        <textarea name="endereco" placeholder="Endereço" required /></textarea>
+    </p>
+     <p class="email">
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" placeholder="Telefone" required />
+    </p>
+    <p class="submit">
+        <input type="submit" value="Adicionar" />
+    </p>
+    </form>
+
+</div>
+</body>
+
+
+</html>

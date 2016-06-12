@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+<head>
+	<title>ADM -- Veiculo</title>
+  
+	<script src="../jquery/css.js"></script>
+  <style type="text/css">@import url("css/css.css");</style>
+  <script src="../jquery/formulario.js"></script>
+  <style type="text/css">@import url("css/formulario.css");</style>
+	
+</head>
+<body>
+<div id = "bancoDeDados">
+<h1>Lista de Veiculos</h1>
+<table border="1" align="center">
+<tr>
+<td><strong>Placa</strong></td><td><strong>Marca</strong></td><td><strong>Modelo</strong><td><strong>CPF do Dono</strong></td><td><strong>Reboques este ano</strong></td><td></td>
+</tr>
+<tr>
+<td>KKL-1519</td><td>Citroën</td><td>C4 Pallas<td><strong><a href="">000.000.000-07</a></strong></td><td><strong>1</strong></td><td><a href="">Excluir</a></td>
+</tr>
+<tr>
+<td>KIV-0245</td><td>GM</td><td>Vectra<td><strong><a href="">004.000.000-09</a></strong></td><td style="color: red;"><strong>3</strong></td><td><a href="">Excluir</a></td>
+</tr>
+</table>
+</div>
+
+<div id = "formulario">
+	<h2>Formulário de cadastro de Veiculos</h2>
+    <form method="post" action="FormInsereVeiculo.php" class="form">
+    <p class="name">
+        <label for="placa">Placa</label>
+        <input type="text" name="placa" placeholder="AAA-9999" required />
+    </p>
+    <p class="name">
+        <label for="marca">Marca</label>
+        <input type="text" name="marca" placeholder="" required />
+    </p>
+    <p class="name">
+        <label for="modelo">Modelo</label>
+        <input type="text" name="modelo" placeholder="" required />
+    </p>
+    <p class="name">
+        <label for="cliente">Cliente</label>
+        <select name='cliente_cpf'>
+   <option value='$cpf'>Wellington</option>";
+   <option value='$cpf'>Diego</option>";
+    </select>
+    </p>
+    <p class="submit">
+        <input type="submit" value="Adicionar" />
+    </p>
+    </form>
+
+</div>
+
+  <img id="wmof" src="../img/wmof.jpg">
+</body>
+
+
+</html>
