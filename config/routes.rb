@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  post 'pagamento/consulta' => 'pagamento#delete'
+  get 'carro/form' => 'carro#form'
+  post 'carro/form' => 'carro#delete'
+  delete 'carro/form' => 'carro#delete'
   get 'cliente/form' => 'cliente#form'
   post 'cliente/form' => 'cliente#update'
   delete 'cliente/updateform' => 'cliente#update'
@@ -15,6 +19,13 @@ Rails.application.routes.draw do
   post 'carro/cardastro' => 'carro#input'
   post 'cliente/cadastro' => 'cliente#clientnew'
   get 'cliente/consulta' => 'cliente#consulta'
+  post 'pagamento/pagreg' => 'pagamento#cadastro'
+  post 'pagamento/cadastro' => 'pagamento#cadastro'
+  get 'pagamento/consulta' => 'pagamento#consulta'
+  post 'carro/consulta' => 'carro#delete'
+  get 'pagamento/form' => 'pagamento#renderform'
+  get 'pagamento/delete' => 'pagamento#delete'
+  post 'pagamento/form' => 'pagamento#delete'
   
   #post 'cliente/update' => 'cliente#update'
   resources :carro

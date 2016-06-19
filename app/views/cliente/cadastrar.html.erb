@@ -8,13 +8,13 @@
 <div_form id = "formulario">
 <h2>Formulario de cadastro de Cliente</h2>
 <%= form_for :cliente, :action => cliente_cadastro_path do |f| %>
-  CPF de clientes: <%= f.text_field :cpf %><br/ >
-  Nome do cliente : <%= f.text_field :nome %><br />
-  Endreco do cliente : <%= f.text_field :endereco %><br />
-  Telefone    : <%= f.text_field :telefone %><br />
-  <%= f.submit %>
+  CPF de clientes: <%= f.text_field :cpf, :id=> "cpf_form", :maxlength => 14%><br/ >
+  Nome do cliente : <%= f.text_field :nome, :id=> "name_form" %><br />
+  Endreco do cliente : <%= f.text_field :endereco, :id=> "endereco_form" %><br />
+  Telefone    : <%= f.text_field :telefone, :id=>"tel_form" %><br />
+  <%= f.submit :id =>"submit_client"%>
 <% end %>
-Consulte a lista de cliente <a href='consulta' id='view_consulta'>Aqui</a> <br>
+Consulte a lista de cliente <a href='consulta' id="view_consulta">Aqui</a> <br>
 
 
 </div>

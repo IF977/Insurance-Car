@@ -15,8 +15,13 @@
   Placa do carro: <%= f.text_field :placa %><br/ >
   Marca do carro : <%= f.text_field :marca %><br />
   Modelo do carro : <%= f.text_field :modelo %><br />
-  Nome do cliente    : <%= f.text_field :cliente %><br />
-  <%= f.submit %>
+  <div style='right:0'>
+  Listagem dos clientes abaixo. Selecione em qual deles será salvo os dados do carro digitado acima: <br>
+  Nome do cliente :
+  <%= f.select :cliente, options_for_select(Cliente.all.collect {|p| [p.nome]})  %>
+  <%= f.submit "Salvar carro com este cliente" %><br>
+  </select>
+  </div>
 <% end %>
 Para acessar a view de consulta de carros clique <a href='consulta'>Aqui</a>
 </div>

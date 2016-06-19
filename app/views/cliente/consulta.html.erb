@@ -1,18 +1,22 @@
-<p><table>
+<p><table border="1" align="center">
   <thead>
   <tr>
-    <th>cpf</th>
-    <th>nome</th>
-    <th>endereco</th>
-    <th>telefone</th>
+    <th><strong>CPF</strong></th>
+    <th><strong>NOME</strong></th>
+    <th><strong>ENDERECO</strong></th>
+    <th><strong>TELEFONE</strong></th>
+    <th>EXCLUIR CLIENTE</th>
   </tr>
   </thead>
   <tr>
     <% @consulta.each do |f| %>
-    <td><%= f.cpf %></td>
-    <td><%= f.nome%></td>
-    <td><%= f.endereco %></td>
-    <td><%= f.telefone %></td>
+    <%= form_for :cliente, :action => cliente_updateform_path do |j| %>
+    <td><strong><%= j.text_field :cpf, :readonly => true, :value => f.cpf %></strong></td>
+    <td><strong><%= f.nome%></strong></td>
+    <td><strong><%= f.endereco %></strong></td>
+    <td><strong><%= f.telefone %></strong></td>
+    <td><%= j.submit "DELETAR CLIENTE"%></td>
+    <% end %>
   </tr>
 <% end %>
 </p>
