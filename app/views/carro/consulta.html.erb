@@ -1,0 +1,24 @@
+<table border="1" align="center">
+  <thead>
+  <tr>
+    <th>PLACA</th>
+    <th>MARCA</th>
+    <th>MODELO</th>
+    <th>CLIENTE</th>
+    <th>Excluir</th>
+  </tr>
+  </thead>
+  <tr>
+    <% @consulta.each do |f| %>
+    <%= form_for :carro, :action => carro_form_path do |j| %>
+    <td><%= j.text_field :placa, :readonly => true, :value => f.placa %></td>
+    <td><%= f.marca %></td>
+    <td><%= f.modelo %></td>
+    <td><%= f.cliente %></td>
+    <td><%= j.submit "DELETAR CARRO", :class => "btn btn-info"%></td>
+    <% end %>
+  </tr>
+<% end %>
+Teste com sucesso de consulta dos carros existentes. Clique <a href='cardastro'> aqui </a> para voltar
+
+</table>

@@ -1,6 +1,6 @@
 class CreatePagamentos < ActiveRecord::Migration
   def change
-    create_table :pagamentos do |t|
+    create_table :pagamento do |t|
       t.string :codigo
       t.string :data
       t.string :hora
