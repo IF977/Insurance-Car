@@ -4,60 +4,26 @@
 <html>
 <head>
 	<title>ADM -- Veiculo</title>
-  
-	<script src="../jquery/css.js"></script>
-  <style type="text/css">@import url("css/css.css");</style>
-  <script src="../jquery/formulario.js"></script>
-  <style type="text/css">@import url("css/formulario.css");</style>
 	
 </head>
 <body>
-<div id = "bancoDeDados">
-<h1>Lista de Veiculos</h1>
-<table border="1" align="center">
-<tr>
-<td><strong>Placa</strong></td><td><strong>Marca</strong></td><td><strong>Modelo</strong><td><strong>CPF do Dono</strong></td><td></td>
-</tr>
-<tr>
-<td>KKL-1519</td><td>Citroën</td><td>C4 Pallas<td><strong><a href="">000.000.000-07</a></strong></td><td><a href="">Excluir</a></td>
-</tr>
-<tr>
-<td>KIV-0245</td><td>GM</td><td>Vectra<td><strong><a href="">004.000.000-09</a></strong></td><td><a href="">Excluir</a></td>
-</tr>
-</table>
-</div>
+
 
 <div id = "formulario">
 	<h2>Formulario de cadastro de Veiculos</h2>
-    <form method="post" action="FormInsereVeiculo.php" class="form">
-    <p class="name">
-        <label for="placa">Placa</label>
-        <input type="text" name="placa" placeholder="AAA-9999" required />
-    </p>
-    <p class="name">
-        <label for="marca">Marca</label>
-        <input type="text" name="marca" placeholder="" required />
-    </p>
-    <p class="name">
-        <label for="modelo">Modelo</label>
-        <input type="text" name="modelo" placeholder="" required />
-    </p>
-    <p class="name">
-        <label for="cliente">Cliente</label>
-        <select name='cliente_cpf'>
-   <option value='$cpf'>Wellington</option>";
-   <option value='$cpf'>Diego</option>";
-    </select>
-    </p>
-    <p class="submit">
-        <input type="submit" value="Adicionar" />
-    </p>
-    </form>
-
+<%= form_for :carro, :action => carro_cardastro_path do |f| %>
+  Placa do carro: <%= f.text_field :placa %><br/ >
+  Marca do carro : <%= f.text_field :marca %><br />
+  Modelo do carro : <%= f.text_field :modelo %><br />
+  <div style='right:0'>
+  Listagem dos clientes abaixo. Selecione em qual deles será salvo os dados do carro digitado acima: <br>
+  Nome do cliente :
+  <%= f.select :cliente, options_for_select(Cliente.all.collect {|p| [p.nome]})  %>
+  <%= f.submit "Salvar carro com este cliente" %><br>
+  </select>
+  </div>
+<% end %>
+Para acessar a view de consulta de carros clique <a href='consulta'>Aqui</a>
 </div>
-
-  <img id="wmof" src="../img/wmof.jpg">
 </body>
-
-
 </html>

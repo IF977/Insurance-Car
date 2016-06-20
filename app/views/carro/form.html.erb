@@ -1,0 +1,8 @@
+DELETE o carro Digitando a PLACA dele seguir: <br></p>
+<%= form_for :carro, :action => carro_form_path do |f| %>
+<label >PLACA: </label>
+<%= f.text_field :placa %>
+<%= f.submit "DELETAR CARRO", :class => "btn btn-info" %>
+<% end %>
+
+

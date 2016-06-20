@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20160506193547) do
 
+  create_table "carros", force: :cascade do |t|
+    t.string   "placa"
+    t.string   "marca"
+    t.string   "modelo"
+    t.string   "clientes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "clientes", force: :cascade do |t|
     t.string   "cpf"
     t.string   "nome"
@@ -22,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160506193547) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pagamentos", force: :cascade do |t|
+  create_table "pagamento", force: :cascade do |t|
     t.string   "codigo"
     t.string   "data"
     t.string   "hora"
@@ -31,7 +40,7 @@ ActiveRecord::Schema.define(version: 20160506193547) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "reboques", force: :cascade do |t|
+  create_table "reboque", force: :cascade do |t|
     t.string   "codigo"
     t.string   "data"
     t.string   "hora"
@@ -43,7 +52,7 @@ ActiveRecord::Schema.define(version: 20160506193547) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "revisaos", force: :cascade do |t|
+  create_table "revisao", force: :cascade do |t|
     t.string   "codigo"
     t.string   "data"
     t.string   "hora"
@@ -52,14 +61,6 @@ ActiveRecord::Schema.define(version: 20160506193547) do
     t.boolean  "autorizacao"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "veiculos", force: :cascade do |t|
-    t.string   "placa"
-    t.string   "marca"
-    t.string   "modelo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

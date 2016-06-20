@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+<head>
+
+	
+</head>
+<body>
+
+<div id = "formulario">
+	<h2>Formulario de cadastro de Pagamento</h2>
+    <%= form_for :pagamento, :action => pagamento_cadastro_path do |f| %>
+    <p class="name">
+        <label for="placa">Placa</label>
+        <%= f.select :placa, options_for_select(Carro.all.collect {|p| [p.placa]})  %>
+    </p>
+    <p class="name">
+        <label for="valor">Valor</label>
+         <%= f.text_field :valor, :id=> "valor_form", :readonly => true, :value => 'R$79,90' %>
+    </p>    
+    <p class="submit">
+        <%= f.submit :id =>"submit_pagamento"%>
+        <%end%>
+    </p>
+    </form>
+Para consultar todos os pagamentos existentes, consulte a view <a href='consulta' id='view_consulta'>aqui</a>.
+
+</div>
+</body>
+</html>
