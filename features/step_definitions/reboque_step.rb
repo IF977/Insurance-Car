@@ -8,5 +8,5 @@ When(/^I click on the trailer view link$/) do
 end
 
 Then(/^I should see "Lista de Reboques"$/) do
-  expect(page).to have_content('Lista de Reboques')
+  expect(page).to have_content('Listando Reboques')
 end

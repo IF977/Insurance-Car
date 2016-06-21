@@ -5,6 +5,9 @@ Feature: Cadastrar revisao dos carros dos clientes
   
  Scenario: Cadastro de Revisões dos carros de clientes
    Given I am on the index
+   And theres a entry wich i want to see
    When I click on the revision view link
    Then I should see "Lista de Revisoes"
+   And i shoul see a red numbered entry
+   
   

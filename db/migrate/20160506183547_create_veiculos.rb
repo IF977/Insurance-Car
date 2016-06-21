@@ -4,7 +4,7 @@ class CreateVeiculos < ActiveRecord::Migration
       t.string :placa
       t.string :marca
       t.string :modelo
-      t.string :clientes
+      t.string :cliente
 
       t.timestamps null: false
     end

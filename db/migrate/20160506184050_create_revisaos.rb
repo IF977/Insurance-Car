@@ -1,12 +1,11 @@
 class CreateRevisaos < ActiveRecord::Migration
   def change
-    create_table :revisao do |t|
-      t.string :codigo
-      t.string :data
-      t.string :hora
+    create_table :revisaos do |t|
+      t.string :placa
       t.string :km
       t.string :relatorio
-      t.boolean :autorizacao
+      t.string :autorizacao
+      t.string :n_rev
 
       t.timestamps null: false
     end

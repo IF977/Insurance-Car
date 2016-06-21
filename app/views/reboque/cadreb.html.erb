@@ -4,52 +4,63 @@
 <html>
 <head>
 	<title>ADM -- Reboque</title>
+	
+	<h1>Listando Reboques</h1>
+ 
+<table border="1" align="center">
+  <tr>
+    <th>Placa</th>
+    <th>Data - Hora</th>
+    <th>Origem</th>
+    <th>Destino</th>
+    <th>Distancia</th>
+  </tr>
+ 
+<% @listar.each do |list| %>
+  <tr>
+    <td><%= list.placa %></td>
+    <td><%= list.created_at %></td>
+    <td><%= list.origem %></td>
+    <td><%= list.destino %></td>
+    <td><%= list.distancia %></td>
+    </tr>
+<% end %>
+</table>
   
 
 </head>
 <body>
-<div id = "bancoDeDados">
-<h1>Lista de Reboques</h1>
-<table border="1" align="center">
-<tr>
-<td><strong>Data</strong></td><td><strong>Hora</strong></td><td><strong>Origem</strong></td><td><strong>Destino</strong></td><td><strong>Distancia</strong></td><td><strong>Placa do veiculo</strong></td>
-</tr>
-<tr>
-<td>31/05/2016</td><td>09:40</td><td>Varzea, Recife-PE</td><td>Oficina Recife</td><td>18</td><td><strong><a href="">KIV-0245</a></strong></td>
-</tr>
-<tr>
-<td>03/06/2016</td><td>11:25</td><td>Oficina Recife</td><td>Oficina Cabo</td><td>12</td><td><strong><a href="">KIV-0245</a></strong></td>
-</tr>
-</table>
-</div>
 
-<div id = "formulario">
+
+    <div id = "formulario">
 	<h2>Formulário de cadastro de Reboque</h2>
-    <form method="post" action="FormInsereVeiculo.php" class="form">
+    <%= form_for :reboque, :action => reboque_cadreb_path do |f| %>
     <p class="name">
-        <label for="placa">Placa</label>
-        <input type="text" name="placa" placeholder="AAA-9999" required />
+        <%= f.select :placa, options_for_select(Carro.all.collect {|p| [p.placa]})  %>
     </p>
     <p class="name">
         <label for="km">KM</label>
-        <input type="text" name="km" placeholder="" required />
+        <%= f.text_field :km, :id=> "km_form" %>
     </p>
-    <p class="name">
-        <label for="distancia">Distancia</label>
-        <input type="text" name="distancia" placeholder="" required />
-    </p>
-     <p class="text">
+    <p class="text">
         <label for="origem">Origem</label>
-        <textarea name="origem" placeholder="Origem do reboque" required /></textarea>
+        <%= f.text_area :origem, :id=> "origem_form" %>
     </p>
     <p class="text">
         <label for="destino">Destino</label>
-        <textarea name="destino" placeholder="Destino" required /></textarea>
+        <%= f.text_area :destino, :id=> "destino_form" %>
+    </p>
+    <p class="text">
+        <label for="distancia">Distancia</label>
+        <%= f.text_area :distancia, :id=> "distancia_form" %>
     </p>
     <p class="submit">
-        <input type="submit" value="Adicionar" />
+        <%= f.submit :id =>"submit_reboque"%>
     </p>
     </form>
+    <% end %>
+
+</div>
 
 </div>
 </body>
