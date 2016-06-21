@@ -19,3 +19,10 @@ end
 And (/^i shoul see a red numbered entry/) do
   expect(page).to have_content("4")
 end
+And (/^I click in the details link/) do
+  click_link('detalhes')
+end
+
+Then (/^I should see the detailed information of the revision/) do
+  expect(page).to have_content("Detalhes do reboque")
+end

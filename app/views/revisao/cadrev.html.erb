@@ -20,7 +20,7 @@
     <td><%= list.placa %></td>
     <td><%= list.autorizacao %></td>
     <td><%= list.n_rev.html_safe %></td>
-    <td><%= link_to "Detalhes",  revisao_detalhes_path(:id => list.id), method: "post" %></td>
+    <td><%= link_to "Detalhes",  revisao_detalhes_path(:id => list.id), method: "post", id: 'detalhes' %></td>
     <td><%= link_to "Delete", revisao_delete_path(:id => list.id), method: "delete", data: { confirm: "Tem certeza disso?" } %></td>
   </tr>
 <% end %>
