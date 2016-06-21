@@ -6,8 +6,8 @@ def renderform
   render 'pagamento/delete'
 end
 def delete
-    @delete = Pagamento.new(pagamento_params)
-    id = @delete['cod']
+    @delete = Pagamento.new(del_params)
+    id = @delete['id']
     sql = ActiveRecord::Base.connection
     #result = sql.execute %{SELECT * FROM carros WHERE id ='#{id}'}
     #if result.any?  do;
@@ -36,6 +36,9 @@ end
   private
   def pagamento_params
         params.require(:pagamento).permit(:placa, :valor, :cod)
+  end
+  def del_params
+    params.permit(:id)
   end
 
 end

@@ -25,8 +25,7 @@ end
     @consulta = Cliente.all
   end
 def update                                                                  #Função para deletar um cliente dado o CPF
-    @update = Cliente.new(cliente_params)
-    @update = params[:cliente]['cpf']
+    @update = params['cpf']
     sql = ActiveRecord::Base.connection
     result = sql.execute %{SELECT * FROM clientes WHERE cpf ='#{@update}'}   #O cliente dado existe?
     if result.any?  do;
@@ -40,6 +39,9 @@ end
   private
   def cliente_params
         params.require(:cliente).permit(:cpf, :nome, :endereco, :telefone)
+  end
+  def del_params
+    params.permit(:cpf)
   end
 end
 

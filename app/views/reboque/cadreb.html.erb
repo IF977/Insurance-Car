@@ -3,10 +3,11 @@
 <meta charset="utf-8">
 <html>
 <head>
-	<title>ADM -- Reboque</title>
-	
-	<h1>Listando Reboques</h1>
- 
+<style>
+    .leftbody{
+        text-align: left;
+    }
+</style>
 <table border="1" align="center">
   <tr>
     <th>Placa</th>
@@ -32,33 +33,19 @@
 <body>
 
 
-    <div id = "formulario">
+    <div class = "leftbody">
+        
 	<h2>Formulário de cadastro de Reboque</h2>
+	<fieldset>
+	    <legend>Preencha o Formulário abaixo</legend>
     <%= form_for :reboque, :action => reboque_cadreb_path do |f| %>
-    <p class="name">
-        <%= f.select :placa, options_for_select(Carro.all.collect {|p| [p.placa]})  %>
-    </p>
-    <p class="name">
-        <label for="km">KM</label>
-        <%= f.text_field :km, :id=> "km_form" %>
-    </p>
-    <p class="text">
-        <label for="origem">Origem</label>
-        <%= f.text_area :origem, :id=> "origem_form" %>
-    </p>
-    <p class="text">
-        <label for="destino">Destino</label>
-        <%= f.text_area :destino, :id=> "destino_form" %>
-    </p>
-    <p class="text">
-        <label for="distancia">Distancia</label>
-        <%= f.text_area :distancia, :id=> "distancia_form" %>
-    </p>
-    <p class="submit">
-        <%= f.submit :id =>"submit_reboque"%>
-    </p>
-    </form>
-    <% end %>
+    <label for="placa">PLACA</label><%= f.select :placa, options_for_select(Carro.all.collect {|p| [p.placa]})  %> <br>
+    <label for="km">KM</label> <%= f.text_field :km, :id=> "km_form" %> <br>
+    <label for="origem">Origem</label> <%= f.text_area :origem, :id=> "origem_form" %> <br>
+    <label for="destino">Destino</label> <%= f.text_area :destino, :id=> "destino_form" %> <br>
+    <label for="distancia">Distancia</label> <%= f.text_area :distancia, :id=> "distancia_form" %> <br>
+    <%= f.submit :id =>"submit_reboque"%>
+    <% end %></fieldset>
 
 </div>
 

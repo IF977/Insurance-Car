@@ -14,14 +14,15 @@
     <td><strong><%= f.placa %></strong></td>
     <td><strong><%= f.valor%></strong></td>
     <td><%= f.created_at %></td>
-    <td><%= j.text_field :cod, :readonly => true, :value => f.id %></td>
-    <td><strong><%= j.submit "DELETAR PAGAMENTO" %></strong></td>
+    <td><%= f.id %></td>
+    <td><strong><%= link_to "Detete",  pagamento_delete_path(:id => f.id), method: "post", id: 'delete' %></strong></td>
+    </tr>
     <% end %>
-  </tr>
-<% end %>
-</p>
+  <% end %>
+  </table>
+ 
+
+
 Teste com sucesso de consulta dos pagamentos existentes. Clique <a href='pagreg'> aqui </a> para voltar<br>
-<p>Consulte a View de DELETE clicando <a href='form' id='delete_pagreg'>aqui</a> 
 
 
-</table>
