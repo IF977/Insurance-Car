@@ -2,59 +2,59 @@
 
 <meta charset="utf-8">
 <html>
-<head>
-	<title>ADM -- Revisão</title>
-  
-	<script src="../jquery/css.js"></script>
-  <style type="text/css">@import url("css/css.css");</style>
-  <script src="../jquery/formulario.js"></script>
-  <style type="text/css">@import url("css/formulario.css");</style>
-	
-</head>
+
 <body>
-<div id = "bancoDeDados">
-<h1>Lista de Revisoes</h1>
+<h1>Listando Revisoes</h1>
+ 
 <table border="1" align="center">
-<tr>
-<td><strong>Data</strong></td><td><strong>Hora</strong></td><td><strong>Link</strong></td><td><strong>Placa do veiculo</strong></td>
-</tr>
-<tr>
-<td>20/05/2016</td><td>14:35</td><td><a href="ViewRevisaoDetalheEX1.html">Detalhe</a></td><td><strong><a href="">KKL-1519</a></strong></td>
-</tr>
-<tr>
-<td>18/05/2016</td><td>12:30</td><td><a href="ViewRevisaoDetalheEX2.html">Detalhe</a></td><td><strong><a href="">KIV-0245</a></strong></td>
-</tr>
+  <tr>
+    <th>Placa</th>
+    <th>Autorização</th>
+    <th>N° da Revisão</th>
+    <th>Detalhes</th>
+    <th>Deletar</th>
+  </tr>
+ 
+<% @listar.each do |list| %>
+  <tr>
+    <td><%= list.placa %></td>
+    <td><%= list.autorizacao %></td>
+    <td><%= list.n_rev.html_safe %></td>
+    <td><%= link_to "Detalhes",  revisao_detalhes_path(:id => list.id), method: "post", id: 'detalhes' %></td>
+    <td><%= link_to "Delete", revisao_delete_path(:id => list.id), method: "delete", data: { confirm: "Tem certeza disso?" } %></td>
+  </tr>
+<% end %>
 </table>
-</div>
+ 
+<br>
+<br>
 
 <div id = "formulario">
 	<h2>Formulário de cadastro de Revisão</h2>
-    <form method="post" action="FormInsereVeiculo.php" class="form">
+    <%= form_for :revisao, :action => revisao_cadrev_path do |f| %>
     <p class="name">
-        <label for="placa">Placa</label>
-        <input type="text" name="placa" placeholder="AAA-9999" required />
+        <%= f.select :placa, options_for_select(Carro.all.collect {|p| [p.placa]})  %>
     </p>
     <p class="name">
         <label for="km">KM</label>
-        <input type="text" name="km" placeholder="" required />
-    </p>
-    <p class="name">
-        <label for="valor">Autorizacao</label>
-        <input type="text" name="valor" placeholder="" required />
+        <%= f.text_field :km, :id=> "km_form" %>
     </p>
     <p class="text">
         <label for="relatorio">Relatorio</label>
-        <textarea name="relatorio" placeholder="Relatorio Final" required /></textarea>
+        <%= f.text_area :relatorio, :id=> "relatorio_form" %>
     </p>
     <p class="name">
         <label for="">Autorização</label>
-         <input type="radio" name="autorizacao" value="1"> Sim
-         <input type="radio" name="autorizacao" value="0"> Não
+        <%= f.radio_button(:autorizacao, "Sim") %>
+        <%= label_tag(:age_child, "Sim") %>
+        <%= f.radio_button(:autorizacao, "Nao") %>
+        <%= label_tag(:age_adult, "Nao") %>
     </p>    
     <p class="submit">
-        <input type="submit" value="Adicionar" />
+        <%= f.submit "Salvar Revisão", :id =>"submit_revisao"%>
     </p>
     </form>
+    <% end %>
 
 </div>
 </body>
