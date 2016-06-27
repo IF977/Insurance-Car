@@ -58,7 +58,7 @@ And(/^There's a entry wich i want to compare/) do
 end
 
 Then(/^I should see an error message/) do
-    expect(page).to have_content("RBM4 inc. WMOF Solutions ENSN DHG Inicio Cliente já existe. Clique aqui para voltar")
+    expect(page).to have_content("RBM4 inc. / WMOF Solutions / ENSN / DHG Inicio Cliente já existe, ou CPF digitado é inválido. Clique aqui para voltar")
 end
 
 And(/^i fill the form with some existing client/) do 

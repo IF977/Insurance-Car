@@ -8,5 +8,5 @@ When(/^I click on the trailer view link$/) do
 end
 
 Then(/^I should see "Lista de Reboques"$/) do
-  expect(page).to have_content('RBM4 inc. WMOF Solutions ENSN DHG Inicio ADM -- Reboque Listando Reboques Placa Data - Hora Origem Destino Distancia Formulário de cadastro de Reboque KM Origem Destino Distancia')
+  expect(page).to have_content('RBM4 inc. / WMOF Solutions / ENSN / DHG Inicio Placa Data - Hora Origem Destino Distancia Formulário de cadastro de Reboque Preencha o Formulário abaixo PLACA KM Origem Destino Distancia')
 end

@@ -8,13 +8,21 @@ class ClienteController < ApplicationController
 def clientnew                                                   #Novo cliente
     @cliente = Cliente.new(cliente_params)                      
     @cliente['cpf'] = params[:cliente]['cpf']
+    cpf_valido = check_cpf(@cliente['cpf'])
     @cliente['nome'] = params[:cliente]['nome']
     @cliente['endereco'] = params[:cliente]['endereco']
     @cliente['telefone'] = params[:cliente]['telefone']
     substituir = ActiveRecord::Base.connection
     result = substituir.execute %{SELECT * FROM clientes WHERE EXISTS (SELECT * FROM clientes WHERE cpf ='#{@cliente['cpf']}')} #O dado Cliente já existe?
+  if cpf_valido == false ;
+    @error = "CPF INVÁLIDO!"
+    render 'cliente/createerror'
+    return
+  end
   if result.any?  do;                                                                                                           #Se sim, erro
+      @error = "CLIENTE EXISTENTE!"
       render 'cliente/createerror'
+      return
   end
   else                                                                                                                          #Se não, salve
     @cliente.save!

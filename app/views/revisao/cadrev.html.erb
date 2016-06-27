@@ -2,11 +2,18 @@
 
 <meta charset="utf-8">
 <html>
-
+<style>
+    h1 {
+        text-align:center;
+    }
+    .leftbody{
+        text-align:left;
+    }
+</style>
 <body>
-<h1>Listando Revisoes</h1>
+<h1>Listando Revisões:</h1>
  
-<table border="1" align="center">
+<div style=position:absolute;margin-left:830px;margin-top:-50px;><table border="1">
   <tr>
     <th>Placa</th>
     <th>Autorização</th>
@@ -25,11 +32,12 @@
   </tr>
 <% end %>
 </table>
- 
+</div>
 <br>
 <br>
 
-<div class = "body">
+<div class = "leftbody">
+    <fieldset style="float: left; width: 550px; background-color:black;">
 	<h2>Formulário de cadastro de Revisão</h2>
     <%= form_for :revisao, :action => revisao_cadrev_path do |f| %>
     <p class="name">
@@ -54,7 +62,7 @@
         <%= f.submit "Salvar Revisão", :id =>"submit_revisao"%>
     </p>
     </form>
-    <% end %>
+    <% end %></fieldset>
 
 </div>
 </body>

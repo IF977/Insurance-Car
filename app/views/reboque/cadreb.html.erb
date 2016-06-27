@@ -36,7 +36,7 @@
     <div class = "leftbody">
         
 	<h2>Formulário de cadastro de Reboque</h2>
-	<fieldset>
+	<fieldset style="float: left; width: 550px; background-color:black;">
 	    <legend>Preencha o Formulário abaixo</legend>
     <%= form_for :reboque, :action => reboque_cadreb_path do |f| %>
     <label for="placa">PLACA</label><%= f.select :placa, options_for_select(Carro.all.collect {|p| [p.placa]})  %> <br>

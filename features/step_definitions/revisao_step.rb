@@ -8,7 +8,7 @@ When(/^I click on the revision view link$/) do
 end
 
 Then(/^I should see "Lista de Revisoes"$/) do
-  expect(page).to have_content('RBM4 inc. WMOF Solutions ENSN DHG Inicio Listando Revisoes Placa Autorização N° da Revisão Detalhes Deletar FIG-9897 Sim 4 Detalhes Delete Formulário de cadastro de Revisão KM Relatorio Autorização Sim Nao')
+  expect(page).to have_content('RBM4 inc. / WMOF Solutions / ENSN / DHG Inicio Listando Revisões: Placa Autorização N° da Revisão Detalhes Deletar FIG-9897 Sim 4 Detalhes Delete Formulário de cadastro de Revisão KM Relatorio Autorização Sim Nao')
 end
 
 And(/^theres a entry wich i want to see/) do
@@ -24,5 +24,5 @@ And (/^I click in the details link/) do
 end
 
 Then (/^I should see the detailed information of the revision/) do
-  expect(page).to have_content("RBM4 inc. WMOF Solutions ENSN DHG Inicio Detalhes do reboque PLACA: FIG-9897 KILOMETRAGEM: RELATORIO: Behaviour Driven Development AUTORIZAÇÃO: Sim Clique aqui para voltar")
+  expect(page).to have_content("RBM4 inc. / WMOF Solutions / ENSN / DHG Inicio Detalhes da revisao PLACA:FIG-9897 KILOMETRAGEM: AUTORIZAÇÃO: Sim RELATORIO: Behaviour Driven Development Clique aqui para voltar")
 end
