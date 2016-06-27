@@ -11,11 +11,11 @@
   <tr>
     <% @consulta.each do |f| %>
     <%= form_for :carro, :action => carro_form_path do |j| %>
-    <td><%= j.text_field :placa, :readonly => true, :value => f.placa %></td>
+    <td><%= f.placa %></td>
     <td><%= f.marca %></td>
     <td><%= f.modelo %></td>
     <td><%= f.cliente %></td>
-    <td><%= j.submit "DELETAR CARRO", :class => "btn btn-info"%></td>
+    <td><%= link_to "Delete", carro_form_path(:placa => f.placa), method: "post", data: { confirm: "Tem certeza disso?" } %></td>
     <% end %>
   </tr>
 <% end %>

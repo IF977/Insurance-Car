@@ -4,17 +4,29 @@
 <html>
 <head>
 </head>
+<style>
+div{
+    text-align: right;
+}
+.body{
+  text-align: left;
+}
+</style>
 <body>
+
 <div_form id = "formulario">
-<h2>Formulario de cadastro de Cliente</h2>
+<div class="head"></div><div class="body"><h2>Formulario de cadastro de Cliente</h2>
 <%= form_for :cliente, :action => cliente_cadastro_path do |f| %>
-  CPF de clientes: <%= f.text_field :cpf, :id=> "cpf_form", :maxlength => 14%><br/ >
-  Nome do cliente : <%= f.text_field :nome, :id=> "name_form" %><br />
-  Endreco do cliente : <%= f.text_field :endereco, :id=> "endereco_form" %><br />
-  Telefone    : <%= f.text_field :telefone, :id=>"tel_form" %><br />
+  <div style=position:absolute;margin-left:160px;margin-top:-20px;width:689px;height:100px;z-index:1;>
+  <fieldset>
+	  <legend>Preencha o formulario a seguir:</legend>
+  CPF de clientes: <%= f.text_field :cpf, :id=> "cpf_form", :maxlength => 14, :required => true%><br/ >
+  Nome do cliente : <%= f.text_field :nome, :id=> "name_form", :required => true %><br />
+  Endreco do cliente : <%= f.text_field :endereco, :id=> "endereco_form", :required => true %><br />
+  Telefone    : <%= f.text_field :telefone, :id=>"tel_form", :required => true%><br />
   <%= f.submit :id =>"submit_client"%>
 <% end %>
-Consulte a lista de cliente <a href='consulta' id="view_consulta">Aqui</a> <br>
+Consulte a lista de cliente <a href='consulta' id="view_consulta">Aqui</a> </fieldset><br></div>
 
 
 </div>

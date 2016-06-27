@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
+<style>
+div{
+    text-align: right;
+}
+.body {
+  text-align: center;
+}
+.bodyleft {
+  text-align: left;
+}
+</style>
 <head>
-  <title>Insurace-car</title>
+  <title>Insurance-car</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<div style=position:absolute;margin-left:450px;margin-top:500px;width:600px;height:140px;z-index:1> 
-RBM4 inc. <br>
-WMOF Solutions <br>
-ENSN <br>
-DHG <br>
+<body  background="http://skriptkoder.com/wp-content/uploads/2014/12/board-black-series-texture-background-wood-wallpaper-wood-texture-wallpapers-476.jpg">
+<div style=position:center;width:600px;height:100px;z-index:1>
+<font color="white"> 
+RBM4 inc. / WMOF Solutions / ENSN / DHG <br>
 
-<h5></h7><a href= '/' id='index'>Inicio</a></a></h5></div>
+<div style=position:absolute;margin-left:-600px;margin-top:-38px;width:689px;height:100px;z-index:1><h3></h7><a href= '/' id='index' align='center'>Inicio</a></a></h3></div></div>
 
 <%= yield %>
 

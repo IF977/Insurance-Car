@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'revisao/detalhes' => 'revisao#detalhes'
   post 'revisao/detalhes' => 'revisao#detalhes'
+  post 'pagamento/delete' => 'pagamento#delete'
   get 'revisao/delete' => 'revisao#delete'
   delete 'revisao/delete' => 'revisao#delete'
   post 'revisao/delete' => 'revisao#cadrev'

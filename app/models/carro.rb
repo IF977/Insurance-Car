@@ -9,4 +9,6 @@ class Carro < ActiveRecord::Base
         #@cliente = attributes[:cliente]
     #end
 
+    
+
 end

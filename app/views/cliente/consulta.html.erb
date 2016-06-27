@@ -10,18 +10,17 @@
   </thead>
   <tr>
     <% @consulta.each do |f| %>
-    <%= form_for :cliente, :action => cliente_updateform_path do |j| %>
-    <td><strong><%= j.text_field :cpf, :readonly => true, :value => f.cpf %></strong></td>
+    
+    <td><strong><%= f.cpf  %></strong></td>
     <td><strong><%= f.nome%></strong></td>
     <td><strong><%= f.endereco %></strong></td>
     <td><strong><%= f.telefone %></strong></td>
-    <td><%= j.submit "DELETAR CLIENTE"%></td>
+    <td><%= link_to "Detete", cliente_updateform_path(:cpf => f.cpf), method: "post", id: 'delete' %></td>
+    </tr>
     <% end %>
-  </tr>
-<% end %>
+    </table>
 </p>
 Teste com sucesso de consulta dos clientes existentes. Clique <a href='cadastro'> aqui </a> para voltar<br>
-<p>Consulte a View de DELETE clicando <a href='form' id='delete_client'>aqui</a> 
 
 
-</table>
+
